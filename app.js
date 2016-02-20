@@ -18,6 +18,20 @@ var app = express();
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
+// testing - hello world
+// app.get('/', function (req, res) {
+//   res.send('Hello World!');
+// });
+
+// testing - jade engine setup
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+
+// testing - jade
+app.get('/', function (req, res) {
+  res.render('index', {title: 'Hey', message: 'Hello there! This is HTML being written out by a Jade template. Styles are written in Sass and processed via Gulp!'});
+})
+
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
