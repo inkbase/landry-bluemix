@@ -29,7 +29,7 @@ app.set('view engine', 'jade');
 
 // testing - jade
 app.get('/', function (req, res) {
-  res.render('index', {title: 'Hey', message: 'Hello there! This is HTML being written out by a Jade template. Styles are written in Sass and processed via Gulp!'});
+  res.render('index', {title: 'Hey', message: 'Hello there! This is HTML being written out by a Jade template. Styles are written in Sass and processed via Gulp! Hi Matt.'});
 })
 
 // get the app environment from Cloud Foundry
